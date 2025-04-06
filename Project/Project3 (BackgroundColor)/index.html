@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND COLOR CHANGER</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-top: 60px;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 30px auto;
+            font-size: 18px;
+            line-height: 2.0;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 50px;
+            background-color: #444;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+
+        #Code {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body id="bg">
+    <h1>RANDOM BACKGROUND COLOR CHANGER</h1>
+    <section class="content">
+        This project demonstrates how to change the background color of a webpage using JavaScript and hexadecimal color
+        codes.<br>
+        A hexadecimal color starts with a # followed by 6 characters (0–9 and A–F) , representing
+        red, green, and blue components.<br><br>
+        Click the button below to generate a random hex color and see your background change in real time!<br>
+    </section>
+    <button onclick="change()">CHANGE BACKGROUND</button>
+    <div id="Code"></div>
+    <script>
+        function change() {
+            let color = "#"
+            let hex = "0123456789ABCDEF"
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)]
+            }
+            document.getElementsByTagName("body")[0].style.backgroundColor = color
+            document.getElementById("Code").innerText = "Current Color:" + color
+
+        }
+    </script>
+</body>
+
+</html>

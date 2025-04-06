@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 1</title>
+    <style>
+        header {
+            background: white;
+            padding: 20px;
+            width: auto;
+            border-radius: 50px;
+            box-shadow: 0px 4px 8px rgba(67, 37, 37, 0.932);
+            text-align: center;
+        }
+
+        p {
+            height: fit-content;
+            width: auto;
+            padding: 100px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header>
+        <h1>DEMONSTATE TASK 1 : DARK AND LIGHT MODE OF BACKGROUND</h1>
+        <button onclick="dark()">DARK MODE</button>
+        <button onclick="light()">LIGHT MODE</button>
+    </header>
+    <section>
+        <p id="a">Welcome to my first JavaScript project! This simple web page demonstrates how you can switch between
+            dark and
+            light modes using JavaScript. The background and text colors change dynamically when you click the buttons
+            above.</p>
+    </section>
+    <script>
+        function dark() {
+            document.getElementById("body").style.backgroundColor = "black"
+            document.getElementById("a").style.color = "white"
+
+        }
+        function light() {
+            document.getElementById("body").style.backgroundColor = "rgba(146, 183, 226, 0.384)"
+            document.getElementById("a").style.color = "black"
+        }
+    </script>
+</body>
+
+</html>
